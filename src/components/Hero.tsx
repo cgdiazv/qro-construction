@@ -36,13 +36,13 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="rounded-full bg-[#02a9e4] px-8 py-3.5 font-bold text-white shadow-lg transition hover:bg-[#0172be]"
+              className="w-full rounded-full bg-[#02a9e4] px-8 py-3.5 text-center font-bold text-white shadow-lg transition hover:bg-[#0172be] sm:w-auto"
             >
               Request a Quote
             </Link>
             <Link
               href="/projects"
-              className="rounded-full border border-white/30 bg-white/5 px-8 py-3.5 font-semibold transition hover:bg-white/10 hover:border-white/50"
+              className="w-full rounded-full border border-white/30 bg-white/5 px-8 py-3.5 text-center font-semibold transition hover:bg-white/10 hover:border-white/50 sm:w-auto"
             >
               View Our Work
             </Link>

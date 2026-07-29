@@ -43,7 +43,7 @@ export default function ServicesPage() {
           <p className="mt-3 max-w-2xl text-stone-300">
             Whether you need a small renovation or a large commercial transformation, our team is ready to help.
           </p>
-          <Link href="/contact" className="mt-6 inline-flex rounded-full bg-[#02a9e4] px-6 py-3 font-semibold text-white transition hover:bg-[#0172be]">
+          <Link href="/contact" className="mt-6 inline-flex w-full justify-center rounded-full bg-[#02a9e4] px-6 py-3 font-semibold text-white transition hover:bg-[#0172be] sm:w-auto">
             Book a consultation
           </Link>
         </div>

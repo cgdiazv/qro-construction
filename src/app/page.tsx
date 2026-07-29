@@ -33,7 +33,7 @@ export default function Home() {
           </ul>
         </div>
 
-        <div className="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm">
+        <div>
           <h3 className="text-2xl font-semibold text-stone-900">Featured Projects</h3>
           <div className="mt-6">
             <ProjectGallery featured />
@@ -51,7 +51,7 @@ export default function Home() {
                 Let’s discuss your timeline, budget, and design priorities so we can propose a clear path forward.
               </p>
             </div>
-            <Link href="/contact" className="inline-flex rounded-full bg-[#02a9e4] px-6 py-3 font-semibold text-white transition hover:bg-[#0172be]">
+            <Link href="/contact" className="inline-flex w-full justify-center rounded-full bg-[#02a9e4] px-6 py-3 font-semibold text-white transition hover:bg-[#0172be] sm:w-auto">
               Start your consultation
             </Link>
           </div>
