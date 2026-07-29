@@ -1,0 +1,76 @@
+"use client";
+
+import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Project, projects } from "@/data/projects";
+
+interface ProjectGalleryProps {
+  items?: Project[];
+  featured?: boolean;
+}
+
+export default function ProjectGallery({ items = projects, featured = false }: ProjectGalleryProps) {
+  const visibleProjects = featured ? items.slice(0, 3) : items;
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const goToPrevious = () => {
+    setActiveIndex((current) => (current === 0 ? visibleProjects.length - 1 : current - 1));
+  };
+
+  const goToNext = () => {
+    setActiveIndex((current) => (current === visibleProjects.length - 1 ? 0 : current + 1));
+  };
+
+  const project = visibleProjects[activeIndex];
+
+  return (
+    <div className="relative">
+      <div className="relative overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-sm">
+        <img src={project.image} alt={project.title} className="h-64 w-full object-cover sm:h-72" />
+
+        <button
+          type="button"
+          onClick={goToPrevious}
+          className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full border border-stone-200 bg-white/90 p-2 text-stone-600 shadow-sm transition hover:border-[#0172be] hover:text-[#0172be]"
+          aria-label="Previous project"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </button>
+
+        <button
+          type="button"
+          onClick={goToNext}
+          className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full border border-stone-200 bg-white/90 p-2 text-stone-600 shadow-sm transition hover:border-[#0172be] hover:text-[#0172be]"
+          aria-label="Next project"
+        >
+          <ChevronRight className="h-5 w-5" />
+        </button>
+
+        <div className="p-6">
+          <div className="flex items-center justify-between gap-3">
+            <h3 className="text-xl font-semibold text-stone-900">{project.title}</h3>
+            <span className="rounded-full bg-[#eaf6ff] px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#0172be]">
+              {project.category}
+            </span>
+          </div>
+          <p className="mt-3 text-sm leading-7 text-stone-600">{project.description}</p>
+          <p className="mt-4 text-sm font-medium text-stone-500">Completed in {project.year}</p>
+        </div>
+      </div>
+
+      <div className="mt-4 flex justify-center gap-2">
+        {visibleProjects.map((_, index) => (
+          <button
+            key={index}
+            type="button"
+            onClick={() => setActiveIndex(index)}
+            className={`h-2.5 w-2.5 rounded-full transition ${
+              index === activeIndex ? "bg-[#0172be]" : "bg-stone-300"
+            }`}
+            aria-label={`Go to project ${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
