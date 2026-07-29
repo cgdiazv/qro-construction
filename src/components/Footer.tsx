@@ -1,3 +1,4 @@
+import { Mail, MapPin, Phone } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -39,14 +40,31 @@ export default function Footer() {
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
               Contact
             </h3>
-            <ul className="space-y-2 text-sm text-slate-300">
-              <li>
+            <ul className="space-y-3 text-sm text-slate-300">
+              <li className="flex items-center gap-2">
+                <Mail className="h-4 w-4 shrink-0 text-[#02a9e4]" />
                 <a
                   href="mailto:info@qroconstruction.com"
                   className="transition-colors hover:text-[#02a9e4]"
                 >
                   info@qroconstruction.com
                 </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 shrink-0 text-[#02a9e4]" />
+                <a href="tel:+12513862046" className="transition-colors hover:text-[#02a9e4]">
+                  (251) 386-2046
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 shrink-0 text-[#02a9e4]" />
+                <a href="tel:+17133041073" className="transition-colors hover:text-[#02a9e4]">
+                  (713) 304-1073
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <MapPin className="h-4 w-4 shrink-0 text-[#02a9e4]" />
+                <span>Houston, TX</span>
               </li>
             </ul>
           </div>

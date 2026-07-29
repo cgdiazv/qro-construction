@@ -1,3 +1,4 @@
+import { Mail, MapPin, Phone } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 
 export default function ContactPage() {
@@ -18,14 +19,28 @@ export default function ContactPage() {
           <div className="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm">
             <h2 className="text-2xl font-semibold text-stone-900">Get in touch</h2>
             <ul className="mt-6 space-y-4 text-stone-600">
-              <li><span className="font-semibold text-stone-900">Email:</span> hello@qroconstruction.com</li>
-              <li><span className="font-semibold text-stone-900">Phone:</span> +52 442 555 0148</li>
-              <li><span className="font-semibold text-stone-900">Office:</span> Querétaro, Qro. México</li>
+              <li className="flex items-start gap-3">
+                <Mail className="mt-1 h-5 w-5 shrink-0 text-[#0172be]" />
+                <a href="mailto:info@qroconstructionllc.com" className="text-[#0172be] hover:underline">
+                  info@qroconstructionllc.com
+                </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <Phone className="mt-1 h-5 w-5 shrink-0 text-[#0172be]" />
+                <div className="flex flex-col">
+                  <a href="tel:+12513862046" className="text-[#0172be] hover:underline">(251) 386-2046</a>
+                  <a href="tel:+17133041073" className="text-[#0172be] hover:underline">(713) 304-1073</a>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <MapPin className="mt-1 h-5 w-5 shrink-0 text-[#0172be]" />
+                <span>Houston, TX</span>
+              </li>
             </ul>
             <div className="mt-8 overflow-hidden rounded-2xl border border-stone-200">
               <iframe
                 title="QRO Construction Office"
-                src="https://www.google.com/maps?q=Quer%C3%A9taro%2C%20Mexico&z=12&output=embed"
+                src="https://www.google.com/maps?q=Houston%2C%20TX&z=12&output=embed"
                 className="h-64 w-full"
                 loading="lazy"
               />
