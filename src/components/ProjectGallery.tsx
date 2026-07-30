@@ -26,7 +26,7 @@ export default function ProjectGallery({ items = projects, featured = false }: P
   return (
     <div className="relative">
       <div className="relative overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-sm">
-        <img src={project.image} alt={project.title} className="h-64 w-full object-cover sm:h-72" />
+        <img src={project.images[0]} alt={project.title} className="h-64 w-full object-cover sm:h-72" />
 
         <button
           type="button"
@@ -54,7 +54,6 @@ export default function ProjectGallery({ items = projects, featured = false }: P
             <h3 className="text-xl font-semibold text-stone-900">{project.title}</h3>
           </div>
           <p className="mt-3 text-sm leading-7 text-stone-600">{project.description}</p>
-          <p className="mt-4 text-sm font-medium text-stone-500">Completed in {project.year}</p>
         </div>
       </div>
 
