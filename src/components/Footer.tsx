@@ -44,10 +44,10 @@ export default function Footer() {
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 shrink-0 text-[#02a9e4]" />
                 <a
-                  href="mailto:info@qroconstruction.com"
+                  href="mailto:info@qroconstructionllc.com"
                   className="transition-colors hover:text-[#02a9e4]"
                 >
-                  info@qroconstruction.com
+                  info@qroconstructionllc.com
                 </a>
               </li>
               <li className="flex items-center gap-2">
