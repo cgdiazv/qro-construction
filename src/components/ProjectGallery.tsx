@@ -25,22 +25,22 @@ export default function ProjectGallery({ items = projects, featured = false }: P
 
   return (
     <div className="relative">
-      <div className="relative overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-sm p-6">
-        <div className="flex flex-col gap-2 mb-4">
-          <span className="w-fit rounded-full bg-[#eaf6ff] px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#0172be]">
+      <div className="relative overflow-hidden rounded-xl border border-stone-200 bg-white shadow-sm p-6">
+        <div className="flex flex-col gap-1 mb-4">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#0172be]">
             {project.category}
           </span>
           <h3 className="text-xl font-semibold text-stone-900">{project.title}</h3>
           <p className="mt-2 text-sm leading-7 text-stone-600">{project.description}</p>
         </div>
 
-        <div className="relative overflow-hidden rounded-2xl">
+        <div className="relative overflow-hidden rounded-lg">
           <img src={project.images[0]} alt={project.title} className="h-64 w-full object-cover sm:h-72" />
 
           <button
             type="button"
             onClick={goToPrevious}
-            className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full border border-stone-200 bg-white/90 p-2 text-stone-600 shadow-sm transition hover:border-[#0172be] hover:text-[#0172be]"
+            className="absolute left-3 top-1/2 -translate-y-1/2 rounded-lg border border-stone-200 bg-white/90 p-2 text-stone-600 shadow-sm transition hover:border-[#0172be] hover:text-[#0172be]"
             aria-label="Previous project"
           >
             <ChevronLeft className="h-5 w-5" />
@@ -49,7 +49,7 @@ export default function ProjectGallery({ items = projects, featured = false }: P
           <button
             type="button"
             onClick={goToNext}
-            className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full border border-stone-200 bg-white/90 p-2 text-stone-600 shadow-sm transition hover:border-[#0172be] hover:text-[#0172be]"
+            className="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg border border-stone-200 bg-white/90 p-2 text-stone-600 shadow-sm transition hover:border-[#0172be] hover:text-[#0172be]"
             aria-label="Next project"
           >
             <ChevronRight className="h-5 w-5" />
@@ -63,8 +63,8 @@ export default function ProjectGallery({ items = projects, featured = false }: P
             key={index}
             type="button"
             onClick={() => setActiveIndex(index)}
-            className={`h-2.5 w-2.5 rounded-full transition ${
-              index === activeIndex ? "bg-[#0172be]" : "bg-stone-300"
+            className={`h-1.5 transition-all rounded-sm ${
+              index === activeIndex ? "w-6 bg-[#0172be]" : "w-3 bg-stone-300 hover:bg-stone-400"
             }`}
             aria-label={`Go to project ${index + 1}`}
           />

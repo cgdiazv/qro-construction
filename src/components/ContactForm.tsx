@@ -45,7 +45,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm">
+    <form onSubmit={handleSubmit} className="rounded-xl border border-stone-200 bg-white p-6 shadow-sm">
       <div className="grid gap-4 md:grid-cols-2">
         <label className="text-sm font-medium text-stone-700">
           <span className="mb-2 block">Name</span>
@@ -53,7 +53,7 @@ export default function ContactForm() {
             name="name"
             type="text"
             required
-            className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none transition focus:border-[#0172be]"
+            className="w-full rounded-lg border border-stone-300 px-4 py-3 outline-none transition focus:border-[#0172be]"
             placeholder="Your name"
           />
         </label>
@@ -63,7 +63,7 @@ export default function ContactForm() {
             name="email"
             type="email"
             required
-            className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none transition focus:border-[#0172be]"
+            className="w-full rounded-lg border border-stone-300 px-4 py-3 outline-none transition focus:border-[#0172be]"
             placeholder="you@example.com"
           />
         </label>
@@ -73,7 +73,7 @@ export default function ContactForm() {
         <select
           name="inquiryType"
           required
-          className="w-full rounded-2xl border border-stone-300 bg-white px-4 py-3 outline-none transition focus:border-[#0172be]"
+          className="w-full rounded-lg border border-stone-300 bg-white px-4 py-3 outline-none transition focus:border-[#0172be]"
         >
           <option value="">Select an option</option>
           <option value="General Inquiry">General Inquiry</option>
@@ -89,14 +89,14 @@ export default function ContactForm() {
           name="message"
           required
           rows={5}
-          className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none transition focus:border-[#0172be]"
+          className="w-full rounded-lg border border-stone-300 px-4 py-3 outline-none transition focus:border-[#0172be]"
           placeholder="Tell us about your renovation, build-out, or construction need."
         />
       </label>
       <button
         type="submit"
         disabled={isSubmitting}
-        className="mt-6 w-full rounded-full bg-[#0172be] px-6 py-3 font-semibold text-white transition hover:bg-[#015f9a] disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+        className="mt-6 w-full rounded-lg bg-[#0172be] px-6 py-3 font-semibold text-white transition hover:bg-[#015f9a] disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
       >
         {isSubmitting ? "Sending..." : "Send inquiry"}
       </button>

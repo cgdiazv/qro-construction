@@ -65,7 +65,7 @@ export default function ProjectsPage() {
           {projects.map((project) => (
             <article
               key={project.title}
-              className="overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-md flex flex-col justify-between"
+              className="overflow-hidden rounded-xl border border-stone-200 bg-white shadow-md flex flex-col justify-between"
             >
               <div>
                 <button
@@ -89,15 +89,15 @@ export default function ProjectsPage() {
                     priority
                   />
                   <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span className="bg-stone-900/80 text-white text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm">
+                    <span className="bg-stone-900/80 text-white text-xs font-semibold px-3 py-1.5 rounded-lg backdrop-blur-sm">
                       View Gallery
                     </span>
                   </div>
                 </button>
 
                 <div className="p-6">
-                  <div className="flex flex-col gap-2">
-                    <span className="w-fit rounded-full bg-[#eaf6ff] px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#0172be]">
+                  <div className="flex flex-col gap-1">
+                    <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#0172be]">
                       {project.category}
                     </span>
                     <h2 className="text-xl font-semibold text-stone-900">{project.title}</h2>
@@ -123,7 +123,7 @@ export default function ProjectsPage() {
                             currentIndex: index,
                           })
                         }
-                        className="group relative block h-16 sm:h-18 overflow-hidden rounded-xl border border-stone-200 shadow-sm cursor-pointer"
+                        className="group relative block h-16 sm:h-18 overflow-hidden rounded-lg border border-stone-200 shadow-sm cursor-pointer"
                         aria-label={`Open ${project.title} image ${index + 1}`}
                       >
                         <Image
@@ -156,7 +156,7 @@ export default function ProjectsPage() {
             className="absolute top-4 left-4 right-4 z-50 flex items-center justify-between text-white"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="bg-stone-900/80 backdrop-blur-md px-4 py-1.5 rounded-full border border-stone-700/50 text-xs sm:text-sm font-medium">
+            <div className="bg-stone-900/80 backdrop-blur-md px-4 py-1.5 rounded-lg border border-stone-700/50 text-xs sm:text-sm font-medium">
               <span className="text-stone-300 mr-2">{lightboxState.projectTitle}</span>
               <span className="text-[#02a9e4] font-semibold">
                 {lightboxState.currentIndex + 1} / {lightboxState.images.length}
@@ -166,7 +166,7 @@ export default function ProjectsPage() {
             <button
               type="button"
               onClick={() => setLightboxState(null)}
-              className="flex items-center gap-1.5 rounded-full bg-stone-900/80 px-3.5 py-1.5 text-xs sm:text-sm font-medium text-white border border-stone-700/50 transition hover:bg-stone-800 hover:border-stone-600 cursor-pointer"
+              className="flex items-center gap-1.5 rounded-lg bg-stone-900/80 px-3.5 py-1.5 text-xs sm:text-sm font-medium text-white border border-stone-700/50 transition hover:bg-stone-800 hover:border-stone-600 cursor-pointer"
               aria-label="Close lightbox"
             >
               <X className="h-4 w-4" />
@@ -184,7 +184,7 @@ export default function ProjectsPage() {
               <button
                 type="button"
                 onClick={handlePrevImage}
-                className="absolute left-2 sm:left-4 z-10 flex items-center justify-center rounded-full bg-stone-900/80 p-3 text-white border border-stone-700/50 shadow-lg backdrop-blur-md transition hover:bg-stone-800 hover:scale-110 hover:border-stone-500 active:scale-95 cursor-pointer"
+                className="absolute left-2 sm:left-4 z-10 flex items-center justify-center rounded-lg bg-stone-900/80 p-3 text-white border border-stone-700/50 shadow-lg backdrop-blur-md transition hover:bg-stone-800 hover:scale-105 hover:border-stone-500 active:scale-95 cursor-pointer"
                 aria-label="Previous image"
               >
                 <ChevronLeft className="h-6 w-6 sm:h-7 sm:w-7" />
@@ -192,11 +192,11 @@ export default function ProjectsPage() {
             )}
 
             {/* Main Image */}
-            <div className="relative max-h-[82vh] max-w-[90vw] overflow-hidden rounded-2xl shadow-2xl flex items-center justify-center">
+            <div className="relative max-h-[82vh] max-w-[90vw] overflow-hidden rounded-lg shadow-2xl flex items-center justify-center">
               <img
                 src={lightboxState.images[lightboxState.currentIndex]}
                 alt={`${lightboxState.projectTitle} image ${lightboxState.currentIndex + 1}`}
-                className="max-h-[82vh] max-w-[90vw] object-contain rounded-2xl"
+                className="max-h-[82vh] max-w-[90vw] object-contain rounded-lg"
               />
             </div>
 
@@ -205,7 +205,7 @@ export default function ProjectsPage() {
               <button
                 type="button"
                 onClick={handleNextImage}
-                className="absolute right-2 sm:right-4 z-10 flex items-center justify-center rounded-full bg-stone-900/80 p-3 text-white border border-stone-700/50 shadow-lg backdrop-blur-md transition hover:bg-stone-800 hover:scale-110 hover:border-stone-500 active:scale-95 cursor-pointer"
+                className="absolute right-2 sm:right-4 z-10 flex items-center justify-center rounded-lg bg-stone-900/80 p-3 text-white border border-stone-700/50 shadow-lg backdrop-blur-md transition hover:bg-stone-800 hover:scale-105 hover:border-stone-500 active:scale-95 cursor-pointer"
                 aria-label="Next image"
               >
                 <ChevronRight className="h-6 w-6 sm:h-7 sm:w-7" />

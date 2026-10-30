@@ -16,7 +16,7 @@ export default function ContactPage() {
         </div>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_0.9fr]">
-          <div className="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm">
+          <div className="rounded-xl border border-stone-200 bg-white p-8 shadow-sm">
             <h2 className="text-2xl font-semibold text-stone-900">Get in touch</h2>
             <ul className="mt-6 space-y-4 text-stone-600">
               <li className="flex items-start gap-3">
@@ -37,7 +37,7 @@ export default function ContactPage() {
                 <span>Houston, TX</span>
               </li>
             </ul>
-            <div className="mt-8 overflow-hidden rounded-2xl border border-stone-200">
+            <div className="mt-8 overflow-hidden rounded-lg border border-stone-200">
               <iframe
                 title="QRO Construction Office"
                 src="https://www.google.com/maps?q=Houston%2C%20TX&z=12&output=embed"

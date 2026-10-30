@@ -42,7 +42,7 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-20 lg:px-8">
-        <div className="rounded-3xl bg-[#223594] px-8 py-10 text-white sm:px-10">
+        <div className="rounded-xl bg-[#223594] px-8 py-10 text-white sm:px-10">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#02a9e4]">Contact</p>
@@ -51,7 +51,7 @@ export default function Home() {
                 Let’s discuss your timeline, budget, and design priorities so we can propose a clear path forward.
               </p>
             </div>
-            <Link href="/contact" className="inline-flex w-full justify-center rounded-full bg-[#02a9e4] px-6 py-3 font-semibold text-white transition hover:bg-[#0172be] sm:w-auto">
+            <Link href="/contact" className="inline-flex w-full justify-center rounded-lg bg-[#02a9e4] px-6 py-3 font-semibold text-white transition hover:bg-[#0172be] sm:w-auto">
               Start your consultation
             </Link>
           </div>

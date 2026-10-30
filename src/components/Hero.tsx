@@ -19,11 +19,10 @@ export default function Hero() {
         
         {/* Left Column: Headline & Calls to Action */}
         <div className="max-w-2xl">
-          {/* Eyebrow / Tagline Badge */}
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#02a9e4]/30 bg-[#02a9e4]/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-[#b4f0ff]">
-            <span className="h-2 w-2 rounded-full bg-[#02a9e4] animate-pulse" />
+          {/* Eyebrow / Tagline */}
+          <p className="mb-6 text-sm font-semibold uppercase tracking-[0.25em] text-[#b4f0ff]">
             Building with precision in Texas & Beyond
-          </div>
+          </p>
 
           <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
             Quality construction that turns ambitious plans into <span className="text-[#b4f0ff]">lasting spaces</span>.
@@ -36,13 +35,13 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="w-full rounded-full bg-[#02a9e4] px-8 py-3.5 text-center font-bold text-white shadow-lg transition hover:bg-[#0172be] sm:w-auto"
+              className="w-full rounded-lg bg-[#02a9e4] px-8 py-3.5 text-center font-bold text-white shadow-lg transition hover:bg-[#0172be] sm:w-auto"
             >
               Request a Quote
             </Link>
             <Link
               href="/projects"
-              className="w-full rounded-full border border-white/30 bg-white/5 px-8 py-3.5 text-center font-semibold transition hover:bg-white/10 hover:border-white/50 sm:w-auto"
+              className="w-full rounded-lg border border-white/30 bg-white/5 px-8 py-3.5 text-center font-semibold transition hover:bg-white/10 hover:border-white/50 sm:w-auto"
             >
               View Our Work
             </Link>
@@ -50,20 +49,20 @@ export default function Hero() {
         </div>
 
         {/* Right Column: Glassmorphism Highlights Card */}
-        <div className="rounded-3xl border border-white/15 bg-white/10 p-6 sm:p-8 shadow-2xl backdrop-blur-md">
+        <div className="rounded-xl border border-white/15 bg-white/10 p-6 sm:p-8 shadow-2xl backdrop-blur-md">
           <div className="grid gap-4 text-sm text-slate-200 sm:grid-cols-2">
             
-            <div className="rounded-2xl border border-white/10 bg-slate-950/50 p-5 backdrop-blur-sm transition hover:border-[#02a9e4]/40">
+            <div className="rounded-lg border border-white/10 bg-slate-950/50 p-5 backdrop-blur-sm transition hover:border-[#02a9e4]/40">
               <p className="text-3xl sm:text-4xl font-extrabold text-[#b4f0ff]">20+</p>
               <p className="mt-2 font-medium text-slate-300">Years of combined experience</p>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-slate-950/50 p-5 backdrop-blur-sm transition hover:border-[#02a9e4]/40">
+            <div className="rounded-lg border border-white/10 bg-slate-950/50 p-5 backdrop-blur-sm transition hover:border-[#02a9e4]/40">
               <p className="text-3xl sm:text-4xl font-extrabold text-[#b4f0ff]">100%</p>
               <p className="mt-2 font-medium text-slate-300">Transparent project updates</p>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-slate-950/50 p-5 backdrop-blur-sm transition hover:border-[#02a9e4]/40 sm:col-span-2">
+            <div className="rounded-lg border border-white/10 bg-slate-950/50 p-5 backdrop-blur-sm transition hover:border-[#02a9e4]/40 sm:col-span-2">
               <p className="text-3xl sm:text-4xl font-extrabold text-[#b4f0ff]">24/7</p>
               <p className="mt-2 font-medium text-slate-300">Responsive support during every project phase</p>
             </div>

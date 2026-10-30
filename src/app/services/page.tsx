@@ -65,7 +65,7 @@ export default function ServicesPage() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="group flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-sm transition hover:border-stone-300 hover:shadow-md"
+              className="group flex flex-col overflow-hidden rounded-xl border border-stone-200 bg-white shadow-sm transition hover:border-stone-300 hover:shadow-md"
             >
               <div className="relative h-56 w-full overflow-hidden bg-stone-100">
                 <Image
@@ -75,16 +75,17 @@ export default function ServicesPage() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                <span className="absolute bottom-4 left-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#0172be] shadow-sm backdrop-blur-sm">
-                  {service.tag}
-                </span>
               </div>
               <div className="flex flex-1 flex-col justify-between p-6 sm:p-8">
                 <div>
-                  <h2 className="text-xl font-semibold text-stone-900 transition-colors group-hover:text-[#0172be]">
-                    {service.title}
-                  </h2>
+                  <div className="flex flex-col gap-1">
+                    <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#0172be]">
+                      {service.tag}
+                    </span>
+                    <h2 className="text-xl font-semibold text-stone-900 transition-colors group-hover:text-[#0172be]">
+                      {service.title}
+                    </h2>
+                  </div>
                   <p className="mt-3 text-sm leading-7 text-stone-600">{service.description}</p>
                 </div>
 
@@ -103,7 +104,7 @@ export default function ServicesPage() {
           ))}
         </div>
 
-        <div className="mt-16 rounded-3xl bg-[#223594] p-8 text-white sm:p-12">
+        <div className="mt-16 rounded-xl bg-[#223594] p-8 text-white sm:p-12">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#02a9e4]">Get Started</p>
@@ -114,7 +115,7 @@ export default function ServicesPage() {
             </div>
             <Link
               href="/contact"
-              className="inline-flex w-full shrink-0 items-center justify-center rounded-full bg-[#02a9e4] px-8 py-3.5 font-semibold text-white shadow-sm transition hover:bg-[#0172be] sm:w-auto"
+              className="inline-flex w-full shrink-0 items-center justify-center rounded-lg bg-[#02a9e4] px-8 py-3.5 font-semibold text-white shadow-sm transition hover:bg-[#0172be] sm:w-auto"
             >
               Book a consultation
             </Link>

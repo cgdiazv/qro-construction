@@ -75,7 +75,7 @@ export default function Footer() {
             </h3>
             <Link
               href="/contact"
-              className="block w-full rounded-md bg-[#02a9e4] px-4 py-2 text-center text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#0172be] sm:inline-block sm:w-auto"
+              className="block w-full rounded-lg bg-[#02a9e4] px-4 py-2 text-center text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#0172be] sm:inline-block sm:w-auto"
             >
               Get a Quote
             </Link>

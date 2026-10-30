@@ -49,7 +49,7 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className="rounded-md bg-[#0172be] px-4 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#015f9a]"
+              className="rounded-lg bg-[#0172be] px-4 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#015f9a]"
             >
               Get a Quote
             </Link>
@@ -139,7 +139,7 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="block w-full rounded-md bg-[#0172be] px-4 py-2.5 text-center text-base font-semibold text-white shadow-sm hover:bg-[#015f9a]"
+                className="block w-full rounded-lg bg-[#0172be] px-4 py-2.5 text-center text-base font-semibold text-white shadow-sm hover:bg-[#015f9a]"
               >
                 Get a Quote
               </Link>
